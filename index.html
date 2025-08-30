@@ -1,0 +1,220 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>HiFlow</title>
+  <link rel="stylesheet" href="./FreeScale_files/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./FreeScale_files/css/dics.min.css">
+  <link rel="stylesheet" href="./FreeScale_files/css/bulma.min.css">
+  <link rel="stylesheet" href="./FreeScale_files/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./FreeScale_files/css/index.css">
+  <link rel="stylesheet" href="./FreeScale_files/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./FreeScale_files/js/bulma-carousel.min.js"></script>
+  <script src="./FreeScale_files/js/index.js"></script>
+  <script src="./FreeScale_files/js/dics.min.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', domReady);
+      function domReady() {
+          for (const e of document.querySelectorAll(".b-dics")) {
+              new Dics({
+                  container: e,
+                  textPosition: "top"
+              });
+          }
+      }
+  </script>
+  </head>
+  
+  <div class="content">
+    <h1><strong><font color="#22a6b3">🌊HiFlow</font>: Training-free High-Resolution Image Generation <br> with Flow-Aligned Guidance</strong></h1>
+    <!-- <p style="text-align: center; font-weight: bold; font-size: 1.2em">2025</p> -->
+    <p id="authors"><a href="https://bujiazi.github.io/"><b>Jiazi Bu<sup>1,5*</sup></b></a> 
+                    <a href="https://github.com/LPengYang/"><b>Pengyang Ling<sup>2,5*</sup></b></a> 
+                    <a href="https://github.com/YujieOuO"><b>Yujie Zhou<sup>1,5*</sup></b></a> 
+                    <a href="https://panzhang0212.github.io/"><b>Pan Zhang<sup>5†</sup></b></a> 
+                    <a href="https://wutong16.github.io/"><b>Tong Wu<sup>4</sup></b></a></p>
+    <p id="authors"><a href="https://scholar.google.com/citations?user=FscToE0AAAAJ&hl=en/"><b>Xiaoyi Dong<sup>3,5</sup></b></a> 
+                    <a href="https://yuhangzang.github.io/"><b>Yuhang Zang<sup>5</sup></b></a> 
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=sJkqsqkAAAAJ"><b>Yuhang Cao<sup>5</sup></b></a> 
+                    <a href="http://dahua.site/"><b>Dahua Lin<sup>3,5,7</sup></b></a> 
+                    <a href="https://myownskyw7.github.io/"><b>Jiaqi Wang<sup>5,6†</sup></b></a><br>
+    <br>
+    <span style="font-size: 16px"><b><sup>1</sup> Shanghai Jiao Tong University</b> &nbsp;&nbsp; <b><sup>2</sup> University of Science and Technology of China</b>  
+    </span>
+    <br>
+    <span style="font-size: 16px"><b><sup>3</sup> The Chinese University of Hong Kong</b> &nbsp;&nbsp; <b><sup>4</sup> Stanford University</b> &nbsp;&nbsp; <b><sup>5</sup> Shanghai AI Laboratory</b>
+    </span>
+    <br>
+    <span style="font-size: 16px"><b><sup>6</sup> Shanghai Innovation Institute</b> &nbsp;&nbsp; <b><sup>7</sup> CPII under InnoHK</b>
+    </span>
+    <br>
+    <span style="font-size: 16px"><b>(<sup>*</sup> Equal Contribution &nbsp; <sup>†</sup> Corresponding Author)</b>
+    </span></p>
+    <font size="+2">
+      <p style="text-align: center;">
+        <a href="https://arxiv.org/abs/2504.06232" target="_blank"><b>[Paper]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/Bujiazi/HiFlow" target="_blank"><b>[Code]</b></a>
+      </p>
+    </font>
+    <br>
+    <img width="960" src="./FreeScale_files/figs/fig_teaser.png">
+  </div>
+  
+  <div class="container" id="main">
+       <div class="row comp-margin">
+          <div class="col-md-4 col-md-offset-0">
+              <div class="b-dics img-responsive center-block" style="width:100%;">
+                  <img src="./FreeScale_files/figs/flux1_1024.png" alt="Flux (1024×1024)" />
+                  <img src="./FreeScale_files/figs/flux1_4096.png" alt="HiFlow (4096×4096)" />
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="b-dics img-responsive center-block" style="width:100%;">
+                  <img src="./FreeScale_files/figs/flux2_1024.png" alt="Flux (1024×1024)" />
+                  <img src="./FreeScale_files/figs/flux2_4096.png" alt="HiFlow (4096×4096)" />
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="b-dics img-responsive center-block" style="width:100%;">
+                  <img src="./FreeScale_files/figs/flux3_1024.png" alt="Flux (1024×1024)" />
+                  <img src="./FreeScale_files/figs/flux3_4096.png" alt="HiFlow (4096×4096)" />
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <br>
+  
+  <div class="container" id="main">
+       <div class="row comp-margin">
+          <div class="col-md-4 col-md-offset-0">
+              <div class="b-dics img-responsive center-block" style="width:100%;">
+                  <img src="./FreeScale_files/figs/flux4_1024.png" alt="Flux (1024×1024)" />
+                  <img src="./FreeScale_files/figs/flux4_4096.png" alt="HiFlow (4096×4096)" />
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="b-dics img-responsive center-block" style="width:100%;">
+                <img src="./FreeScale_files/figs/flux5_1024.png" alt="Flux (1024×1024)" />
+                <img src="./FreeScale_files/figs/flux5_4096.png" alt="HiFlow (4096×4096)" />
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="b-dics img-responsive center-block" style="width:100%;">
+                <img src="./FreeScale_files/figs/flux6_1024.png" alt="Flux (1024×1024)" />
+                <img src="./FreeScale_files/figs/flux6_4096.png" alt="HiFlow (4096×4096)" />
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <br>
+
+  <div class="container" id="main">
+      <div class="row comp-margin">
+        <div class="col-md-4 col-md-offset-0">
+            <div class="b-dics img-responsive center-block" style="width:100%;">
+              <img src="./FreeScale_files/figs/flux7_1024.png" alt="Flux (1024×1024)" />
+              <img src="./FreeScale_files/figs/flux7_4096.png" alt="HiFlow (4096×4096)" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="b-dics img-responsive center-block" style="width:100%;">
+              <img src="./FreeScale_files/figs/flux8_1024.png" alt="Flux (1024×1024)" />
+              <img src="./FreeScale_files/figs/flux8_4096.png" alt="HiFlow (4096×4096)" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="b-dics img-responsive center-block" style="width:100%;">
+              <img src="./FreeScale_files/figs/flux9_1024.png" alt="Flux (1024×1024)" />
+              <img src="./FreeScale_files/figs/flux9_4096.png" alt="HiFlow (4096×4096)" />
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <br>
+  
+  
+  
+  <div class="content">
+    <h2 style="text-align:center;"><b>Abstract</b></h2>
+    <p>Text-to-image (T2I) diffusion/flow models have drawn considerable attention recently due to their remarkable ability to deliver flexible visual creations. Still, high-resolution image synthesis presents formidable challenges due to the scarcity and complexity of high-resolution content. Recent approaches have investigated training-free strategies to enable high-resolution image synthesis with pre-trained models. However, these techniques often struggle with generating high-quality visuals and tend to exhibit artifacts or low-fidelity details, as they typically rely solely on the endpoint of the low-resolution sampling trajectory while neglecting intermediate states that are critical for preserving structure and synthesizing finer detail. To this end, we present HiFlow, a training-free and model-agnostic framework to unlock the resolution potential of pre-trained flow models. Specifically, HiFlow establishes a virtual reference flow within the high-resolution space that effectively captures the characteristics of low-resolution flow information, offering guidance for high-resolution generation through three key aspects: initialization alignment for low-frequency consistency, direction alignment for structure preservation, and acceleration alignment for detail fidelity. By leveraging such flow-aligned guidance, HiFlow substantially elevates the quality of high-resolution image synthesis of T2I models and demonstrates versatility across their personalized variants. Extensive experiments validate HiFlow's capability in achieving superior high-resolution image quality over state-of-the-art methods. Our code is available at <a href="https://github.com/Bujiazi/HiFlow">HiFlow Repo</a>.</p>
+  </div>
+  
+  
+  <div class="content">
+    <h2><b>Methodology</b></h2>
+    <p>HiFlow constructs reference flow from low-resolution sampling trajectory to offer initiation alignment, direction alignment, and acceleration alignment, enabling flow-aligned high-resolution image generation. Specifically, HiFlow involves a cascade generation paradigm: First, a virtual reference flow is constructed in the high-resolution space based on the step-wise estimated clean samples of the low-resolution sampling flow. Then, during high-resolution synthesizing, the reference flow offers guidance from sampling initialization, denoising direction, and moving acceleration, aiding in achieving consistent low-frequency patterns, preserving structural features, and maintaining high-fidelity details.</p>
+    <div style="text-align: center;">
+    <img width="960" src="./FreeScale_files/figs/fig_framework.png">
+    </div>
+  </div>
+  
+  <div class="content">
+    <h2><b>Qualitative Comparison</b></h2>
+    <p>Image qualitative comparisons with other baselines. HiFlow yields high-resolution images characterized by high-fidelity details and coherent structure.</p>
+    <div style="text-align: center;">
+    <img width="960" src="./FreeScale_files/figs/fig_img_compare.png">
+    </div>
+    <br>
+    <p>Image qualitative comparisons with training-based methods. HiFlow demonstrates the capability to generate high-resolution images with quality comparable to leading training-based models (UltraPixel, Diffusion-4K).</p>
+    <div style="text-align: center;">
+    <img width="960" src="./FreeScale_files/figs/fig_train_compare.png">
+    </div>
+  </div>
+  
+  <div class="content">
+    <h2><b>Versatile Applications of HiFlow</b></h2>
+    <p>Here we demonstrate our results for more applications including <b>LoRA</b>, <b>ControlNet</b>, and <b>Quantization</b>. Additionally, we showcase our results on <b>SDXL</b>, a U-Net based T2I diffusion model.</p>
+    <div style="text-align: center;">
+    <img width="960" src="./FreeScale_files/figs/fig_application.png">
+    </div>
+  </div>
+  
+  
+  <div class="content">
+  <h2>BibTex</h2>
+  <p>
+      If you find this work helpful, please cite the following paper:
+  </p>
+  <div class="row">
+  <pre>
+  @article{bu2025hiflow,
+    title={HiFlow: Training-free High-Resolution Image Generation with Flow-Aligned Guidance},
+    author={Bu, Jiazi and Ling, Pengyang and Zhou, Yujie and Zhang, Pan and Wu, Tong and Dong, Xiaoyi and Zang, Yuhang and Cao, Yuhang and Lin, Dahua and Wang, Jiaqi},
+    journal={arXiv preprint arXiv:2504.06232},
+    year={2025}
+  }
+  </pre>
+  </div>
+  </div>
+
+  <div class="content">
+    <p>Project page template is borrowed from <a href="http://haonanqiu.com/projects/FreeScale.html">FreeScale</a>.</p>
+  </div>
+  
+  
+  <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+    div.grammarly-desktop-integration {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select:none;
+      user-select:none;
+    }
+  
+    div.grammarly-desktop-integration:before {
+      content: attr(data-content);
+    }
+  </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration>
+  </html>
+  
