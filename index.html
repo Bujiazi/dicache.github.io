@@ -143,9 +143,10 @@
   <div class="content">
     <h2><b>Motivation</b></h2>
     <p>In this paper, we uncover two key correlations regarding diffusion transformers (DiT): <br>
-      (1) shallow-layer feature differences of diffusion models exhibit dynamics highly correlated with those of the final output, enabling them to serve as an accurate proxy for model output evolution.</p>
+      (1) Shallow-layer feature differences of diffusion models exhibit dynamics highly correlated with those of the final output, enabling them to serve as an accurate proxy for model output evolution. Since the optimal moment to reuse cached features is governed by the difference between model outputs at consecutive timesteps, it is possible to employ an online shallow-layer probe to efficiently obtain a prior of output changes at runtime, thereby adaptively adjusting the caching strategy.</p>
     <div style="text-align: center;">
     <img width="960" src="./FreeScale_files/figs/fig_observation1.png">
+      (2) The features from different DiT blocks form similar trajectories
     </div>
   </div>
   
